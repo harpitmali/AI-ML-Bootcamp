@@ -1,0 +1,5 @@
+Fetched: 25/07/2026 10:08:14
+Repository URL: https://api.github.com/repos/{owner}/{repo}
+User URL: https://api.github.com/users/{user}
+Rate Limit URL: https://api.github.com/rate_limit
+Gists URL:  https://api.github.com/gists{/gist_id}

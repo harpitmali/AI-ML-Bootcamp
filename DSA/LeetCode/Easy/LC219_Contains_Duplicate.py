@@ -13,7 +13,7 @@ def contains_nearby_duplicate(nums, k):
     return False
 
 
-nums = [1,2,3,1,2,3]
-k = 2
+nums = [1,2,3,1]
+k = 3
 
 print(contains_nearby_duplicate(nums, k))

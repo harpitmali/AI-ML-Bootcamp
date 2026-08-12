@@ -1,0 +1,9 @@
+ID,Name,Department,Age,Salary,Experience,Performance,Annual_Bonus,Total_Compensation,Performance_Level
+108,Henry,AI,31,97000,7,94,10000,107000,Excellent
+104,David,Web,30,95000,6,95,10000,105000,Excellent
+106,Frank,AI,29,92000,5,90,10000,102000,Excellent
+101,Alice,AI,24,90000,2,92,10000,100000,Excellent
+107,Grace,Data,27,88000,4,91,5000,93000,Excellent
+103,Charlie,AI,26,85000,3,88,5000,90000,Good
+102,Bob,Data,28,70000,4,81,5000,75000,Good
+105,Eva,Data,25,65000,1,79,5000,70000,Needs Improvement

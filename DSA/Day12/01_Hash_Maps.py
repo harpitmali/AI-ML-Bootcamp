@@ -37,10 +37,7 @@ def frequency_count(arr):
     frequency = {}
 
     for num in arr:
-        if num in frequency:
-            frequency[num] += 1
-        else:
-            frequency[num] = 1
+        frequency[num] = frequency.get(num, 0) + 1
 
     return frequency
 

@@ -1,7 +1,10 @@
 import joblib
 import pandas as pd
+from pathlib import Path
 
-MODEL_PATH = "../models/employee_salary_model.pkl"
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+MODEL_PATH = BASE_DIR / "models" / "employee_salary_model.pkl"
 
 model = joblib.load(MODEL_PATH)
 

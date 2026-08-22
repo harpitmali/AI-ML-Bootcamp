@@ -99,3 +99,50 @@ nums = [1, 12, -5, -6, 50, 3]
 k = 4
 
 print(max_average(nums, k))
+
+# Challenge — Longest Subarray With Sum ≤ Target
+
+def longest_subarray(nums, target):
+    left = 0
+    window_sum = 0
+    answer = 0
+
+    for right in range(len(nums)):
+        window_sum += nums[right]
+
+        while window_sum > target:
+            window_sum -= nums[left]
+            left += 1
+
+        answer = max(answer, right - left + 1)
+
+    return answer
+
+nums = [1, 2, 1, 0, 1, 1, 0]
+target = 4
+
+print(longest_subarray(nums, target))
+
+# Challenge — Longest Substring Without Repeating Characters
+
+def longest_unique_substring(s):
+    left = 0
+    answer = 0
+    seen = set()
+
+    for right in range(len(s)):
+        while s[right] in seen:
+            seen.remove(s[left])
+            left += 1
+
+        seen.add(s[right])
+
+        answer = max(
+            answer,
+            right - left + 1
+        )
+
+    return answer
+
+s = "pwwkew"
+print(longest_unique_substring(s))

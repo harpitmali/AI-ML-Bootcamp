@@ -1,34 +1,40 @@
-def character_replacement(s, k):
-    left = 0
-    freq = {}
-    max_freq = 0
-    answer = 0
+def three_sum(nums):
+    nums.sort()
+    result = []
 
-    for right in range(len(s)):
+    for i in range(len(nums)):
 
-        freq[s[right]] = freq.get(s[right], 0) + 1
+        if i > 0 and nums[i] == nums[i - 1]:
+            continue
 
-        max_freq = max(
-            max_freq,
-            freq[s[right]]
-        )
+        left = i + 1
+        right = len(nums) - 1
 
-        while (right - left + 1) - max_freq > k:
-            freq[s[left]] -= 1
+        while left < right:
 
-            if freq[s[left]] == 0:
-                del freq[s[left]]
+            current = nums[i] + nums[left] + nums[right]
 
-            left += 1
+            if current == 0:
 
-        answer = max(
-            answer,
-            right - left + 1
-        )
+                result.append([nums[i], nums[left], nums[right]])
 
-    return answer
+                while left < right and nums[left] == nums[left+1]:
+                    left += 1
+                
+                while left < right and nums[right] == nums[right-1]:
+                    right -= 1
 
-s = "ABCDE"
-k = 1
+                left += 1
+                right -= 1
 
-print(character_replacement(s, k))
+            elif current < 0:
+                left += 1
+
+            else:
+                right -= 1
+
+    return result
+
+nums = [-1, 0, 1, 2, -1, -4]
+
+print(three_sum(nums))

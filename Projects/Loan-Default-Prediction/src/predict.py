@@ -128,76 +128,21 @@ def display_prediction(customer_number, customer):
 
 if __name__ == "__main__":
 
-    customer_1 = {
-        "age": 45,
-        "income": 100000,
-        "employment_length": 15,
-        "loan_amount": 12000,
-        "interest_rate": 7.0,
-        "credit_score": 780,
+    customer = {
+        "age": 35,
+        "income": 50000,
+        "employment_length": 5,
+        "loan_amount": 15000,
+        "interest_rate": 8.5,
+        "credit_score": 720,
         "loan_term": 36,
-        "home_ownership": "Own",
+        "home_ownership": "Mortgage",
         "loan_purpose": "Home_Improvement",
-        "education": "Master",
+        "education": "Bachelor",
         "marital_status": "Married"
     }
-    
-    customer_2 = {
-        "age": 25,
-        "income": 30000,
-        "employment_length": 1,
-        "loan_amount": 25000,
-        "interest_rate": 17.0,
-        "credit_score": 560,
-        "loan_term": 60,
-        "home_ownership": "Rent",
-        "loan_purpose": "Medical",
-        "education": "High_School",
-        "marital_status": "Single"
-    }
 
-    customer_3 = {
-        "age": 35,
-        "income": 65000,
-        "employment_length": 7,
-        "loan_amount": 18000,
-        "interest_rate": 9.5,
-        "credit_score": 710,
-        "loan_term": 60,
-        "home_ownership": "Mortgage",
-        "loan_purpose": "Debt_Consolidation",
-        "education": "Bachelor",
-        "marital_status": "Married" 
-    }
-
-    customer_4 = {
-        "age":16,
-        "income":65000,
-        "employment_length":7,
-        "loan_amount":18000,
-        "interest_rate":9.5,
-        "credit_score":710,
-        "loan_term":60,
-        "home_ownership":"Mortgage",
-        "loan_purpose":"Debt_Consolidation",
-        "education":"Bachelor",
-        "marital_status":"Married"
-    }
-
-    customer_5 = {
-        "age":32,
-        "income":-5000,
-        "employment_length":7,
-        "loan_amount":18000,
-        "interest_rate":9.5,
-        "credit_score":710,
-        "loan_term":60,
-        "home_ownership":"Mortgage",
-        "loan_purpose":"Debt_Consolidation",
-        "education":"Bachelor",
-        "marital_status":"Married"
-    }
-
-    display_prediction(1, customer_1)
-    display_prediction(2, customer_2)
-    display_prediction(3, customer_3)
+    display_prediction(
+        customer_number=1,
+        customer=customer
+    )

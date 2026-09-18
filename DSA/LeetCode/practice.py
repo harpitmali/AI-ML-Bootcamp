@@ -1,4 +1,4 @@
-def binary_search(nums, target):
+def search_rotated(nums, target):
     left = 0
     right = len(nums) - 1
 
@@ -8,53 +8,26 @@ def binary_search(nums, target):
 
         if target == nums[mid]:
             return mid
-        elif target > nums[mid]:
-            left = mid + 1
+        
+        elif nums[left] <= nums[mid]:
+
+            if nums[left] <= target < nums[mid]:
+                right = mid - 1
+            else:
+                left = mid + 1
+
         else:
-            right = mid - 1
+
+            if nums[mid] < target <= nums[right]:
+                left = mid + 1
+            else:
+                right = mid - 1
 
     return -1
 
 
-def find_first_occurrence(nums, target):
-    left = 0
-    right = len(nums) - 1
-    result = -1
-
-    while left <= right:
-        mid = (left + right) // 2
-
-        if target == nums[mid]:
-            result = mid
-            right = mid - 1
-        elif target > nums[mid]:
-            left = mid + 1
-        else:
-            right = mid - 1
-
-    return result
-
-
-def find_last_occurrence(nums, target):
-    left = 0
-    right = len(nums) - 1
-
-    while left <= right:
-
-        mid = (left + right) // 2
-
-        if target == nums[mid]:
-            left = mid + 1
-        elif target > nums[mid]:
-            left = mid + 1
-        else:
-            right = mid - 1
-
-    return right
-
-
-nums = [1, 2, 2, 2, 3, 4, 5]
-
-print(binary_search(nums, 2))
-print(find_first_occurrence(nums, 2))
-print(find_last_occurrence(nums, 2))
+print(search_rotated([4,5,6,7,0,1,2], 0))  # 4
+print(search_rotated([4,5,6,7,0,1,2], 3))  # -1
+print(search_rotated([5,6,7,1,2,3,4], 2))  # 4
+print(search_rotated([1], 1))               # 0
+print(search_rotated([1], 0))               # -1

@@ -134,7 +134,7 @@ if __name__ == "__main__":
         "employment_length": 5,
         "loan_amount": 15000,
         "interest_rate": 8.5,
-        "credit_score": 720,
+        "credit_score": 750,
         "loan_term": 36,
         "home_ownership": "Mortgage",
         "loan_purpose": "Home_Improvement",
